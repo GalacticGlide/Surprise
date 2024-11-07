@@ -1,94 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Dancing Script', cursive;
     text-align: center;
     margin: 0;
+    background: linear-gradient(135deg, #ff9a8b, #ff6a88, #d8a7b1); /* Soft romantic gradient */
+    color: #333;
 }
 
-.container {
-    padding: 20px;
-}
 
-h1 {
-    margin-bottom: 20px;
-    
-}
-
-.buttons {
-    margin: 20px;
-}
-
-button {
-    font-size: 36px;
-    font-weight: 700;
-    padding: 16px 32px;
-    margin: 10px;
-    border: none;
-    border-radius: 20px;
-    background-color: #ff4081;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.popup {
-    display: none;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-}
-body {
-    font-family: 'Great Vibes', cursive;
-    text-align: center;
-    margin: 0;
-    background-color: #f9f4f5; /* Soft pastel color for the background */
-}
 
 .container {
     padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
 }
 
 h1 {
-    font-size: 74px;
+    font-size: 60px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #e91e63;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.heart-icon {
+    width: 150px;
+    margin-bottom: 30px;
+    animation: heart-beat 1.5s ease infinite;
+}
+
+@keyframes heart-beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
 
 .buttons {
-    margin: 20px;
+    margin-top: 30px;
 }
 
 button {
     font-size: 36px;
     font-weight: 700;
-    padding: 16px 32px;
-    margin: 10px;
+    padding: 20px 40px;
+    margin: 15px;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     background-color: #ff4081;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #ff5c8d; /* Lighter shade on hover for a soft effect */
+    background-color: #ff5c8d;
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
+button:active {
+    transform: scale(1);
+}
+
+/* Popup Styles */
 .popup {
     display: none;
     background-color: #fff;
-    border: 1px solid #e91e63; /* Romantic color for the border */
+    border: 1px solid #e91e63;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,16 +80,34 @@ button:hover {
     z-index: 999;
     font-family: 'Dancing Script', cursive;
     font-size: 34px;
-    color: #e91e63; /* Romantic color for the popup text */
-}
-
-/* Add a smooth fade-in animation for the popup */
-.popup.fade-in {
-    animation: fadeIn 0.3s ease;
+    color: #e91e63;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
+/* Button Text and Popup Text Styles */
+.popup p {
+    line-height: 1.5;
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Make it responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 45px;
+    }
+
+    button {
+        font-size: 28px;
+        padding: 15px 30px;
+    }
+
+    .heart-icon {
+        width: 120px;
+    }
+}
