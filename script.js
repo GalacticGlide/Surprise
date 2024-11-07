@@ -18,3 +18,5 @@ popup.addEventListener("click", () => {
 
 // Hide the popup initially
 popup.style.display = "none";
+
+
