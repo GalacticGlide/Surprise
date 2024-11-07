@@ -10,6 +10,7 @@ body {
 
 h1 {
     margin-bottom: 20px;
+    
 }
 
 .buttons {
@@ -53,10 +54,10 @@ body {
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 74px;
     font-weight: 700;
     margin-bottom: 30px;
-    color: #e91e63; /* Romantic color for the heading */
+    color: #e91e63;
 }
 
 .buttons {
